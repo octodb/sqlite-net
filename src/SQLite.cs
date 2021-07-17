@@ -2092,7 +2092,7 @@ namespace SQLite
 		/// <param name="Invoke">Your function definition</param>
 		public void OnSync(Action Invoke)
 		{
-			SQLite3.CreateFunction(Handle, "update_notification", 0, 1, IntPtr.Zero,
+			SQLite3.CreateFunction(Handle, "sync_notification", 0, 1, IntPtr.Zero,
 								   new SQLite3.SQLiteCallback((c, cnt, args) => Invoke()),
 								   null, null);
 		}
